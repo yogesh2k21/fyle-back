@@ -1,0 +1,11 @@
+version: '3.8'  # specify docker-compose version
+services: # services means the containers
+
+  fyle:
+    build: .  # dockerfile path
+    container_name: fyle-flask-backend
+    image: fyle-flask-backend:latest # image name
+    environment:  # environment variables that passing in the Dockerfile
+      PORT: 7755 
+    ports:  # port binding of host to container
+      - "5000:7755"
