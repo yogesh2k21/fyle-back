@@ -1,56 +1,58 @@
-# Fyle Backend Challenge
+# Problem Statement: 📃
+So there are 4 Users (2 students and 2 teachers) have already been created for you in the db fixture. So we have to demonstrate an app that do Assignment management.
 
-## Who is this for?
+## What Students can do in that app?
+- A student can create and edit a draft assignment
+- A student can list all his created assignments
+- A student can submit a draft assignment to a teacher
 
-This challenge is meant for candidates who wish intern at Fyle and work with our engineering team. You should be able to commit to at least 3 months of dedicated time for internship.
+## What Teachers can do in that app?
+- A teacher can list all assignments submitted to him
+- A teacher can grade an assignment submitted to him
 
-## Why work at Fyle?
+## My task
+- Add missing APIs mentioned here and get the automated tests to pass
+- Add a test for grading API
+- All tests should pass
+- Get the test coverage to 94% or above
 
-Fyle is a fast-growing Expense Management SaaS product. We are ~40 strong engineering team at the moment. 
+# Things I have done in Assignment
+- Implemented all the missing APIs.
+- Increase pyTest test coverage to maximum as I can and I got 94% test coverage in the pyTest.
+- Added 4 new tests for grading API
+- All tests are passed
 
-We are an extremely transparent organization. Check out our [careers page](https://careers.fylehq.com) that will give you a glimpse of what it is like to work at Fyle. Also, check out our Glassdoor reviews [here](https://www.glassdoor.co.in/Reviews/Fyle-Reviews-E1723235.htm). You can read stories from our teammates [here](https://stories.fylehq.com).
+![Test](https://user-images.githubusercontent.com/52989607/215283952-0e48fe90-08b3-4ad4-9067-f92593ac5836.jpeg)
 
+![Coverage](https://user-images.githubusercontent.com/52989607/215283959-e0735c27-e2a7-4813-95b2-24cc3b83dd60.jpeg)
 
-## Challenge outline
+## Missing APIs
 
-This challenge involves writing a backend service for a classroom. The challenge is described in detail [here](./Application.md)
+- Grade an Assignment
+- List all Assignments that is submitted to the particular teacher.
 
+## New Files
 
-## What happens next?
+- Dockerfile
+- docker-compose.yml
 
-You will hear back within 48 hours from us via email. 
-
-
-## Installation
-
-1. Fork this repository to your github account
-2. Clone the forked repository and proceed with steps mentioned below
-
-### Install requirements
-
+## Installation & Requirements 🏗️🏭
+- Only Docker is required in the system. We Containerize the application to make it cloud native.
+- Now run these commands given below
 ```
-virtualenv env --python=python3.8
-source env/bin/activate
-pip install -r requirements.txt
+> git clone https://github.com/yogesh2k21/fyle-back.git
+> cd /fyle-back
+> docker-compose up --build
 ```
-### Reset DB
+Done!!
 
-```
-export FLASK_APP=core/server.py
-rm core/store.sqlite3
-flask db upgrade -d core/migrations/
-```
-### Start Server
+Now Application is ready to use
 
+Just open browser and type
 ```
-bash run.sh
+http://localhost:5000/
 ```
-### Run Tests
 
-```
-pytest -vvv -s tests/
+## Tools that I use to test APIs
 
-# for test coverage report
-# pytest --cov
-# open htmlcov/index.html
-```
+- [Thunder Client](https://www.thunderclient.com/)
